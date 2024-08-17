@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Sequence>
+
+    <Packet type="DaemonCommands" delay="00 02">
+        <Data type="command-code" value="02" mutable="true" />
+        <Data type="queue-name" value="6c 70" mutable="true" />
+        <Data type="lf" value="0a" mutable="true" />
+    </Packet>
+
+    <Packet type="ReceiveJobSubcommands" delay="20">
+        <Data type="command-code" value="02" mutable="true" />
+        <Size type="count" value="37 39" valueType="string" diff="-1" mutable="true" ref="ControlFile" />
+        <Data type="sp" value="20" mutable="true" />
+        <Data type="name" value="63 66 41 33 33 37 68 6f 73 74 6e 61 6d 65" mutable="true" />
+        <Data type="lf" value="0a" mutable="true" />
+    </Packet>
+
+    <Packet type="ControlFile" name="ControlFile" delay="40">
+        <Block type="ControlFileLines">
+            <Data type="command-code" value="48" mutable="true" />
+            <Data type="command" name="host" value="68 6f 73 74 6e 61 6d 65" />
+            <Data type="lf" value="0a" mutable="true" />
+        </Block>
+        <Block type="ControlFileLines">
+            <Data type="command-code" value="50" mutable="true" />
+            <Data type="command" name="user-id" value="72 6f 6f 74" mutable="true" />
+            <Data type="lf" value="0a" mutable="true" />
+        </Block>
+        <Block type="ControlFileLines">
+            <Data type="command-code" value="4d" mutable="true" />
+            <Data type="command" name="user-id" value="72 6f 6f 74" mutable="true" />
+            <Data type="lf" value="0a" mutable="true" />
+        </Block>
+        <Block type="ControlFileLines">
+            <Data type="command-code" value="4a" mutable="true" />
+            <Data type="command" name="job-name" value="55 6e 74 69 74 6c 65 64 20 31" mutable="true" />
+            <Data type="lf" value="0a" mutable="true" />
+        </Block>
+        <Block type="ControlFileLines">
+            <Data type="command-code" value="6c" mutable="true" />
+            <Data type="command" name="file-to-print" value="64 66 42 33 33 37 68 6f 73 74 6e 61 6d 65" mutable="true" />
+            <Data type="lf" value="0a" mutable="true" />
+        </Block>
+        <Block type="ControlFileLines">
+            <Data type="command-code" value="55" mutable="true" />
+            <Data type="command" name="file-to-unlink" value="64 66 42 33 33 37 68 6f 73 74 6e 61 6d 65" mutable="true" />
+            <Data type="lf" value="0a" mutable="true" />
+        </Block>
+        <Block type="ControlFileLines">
+            <Data type="command-code" value="4e" mutable="true" />
+            <Data type="command" name="file-name" value="2f 65 74 63 2f 70 61 73 73 77 64" mutable="true" />
+            <Data type="lf" value="0a" mutable="true" />
+        </Block>
+        <Data type="end" value="00" mutable="true" />
+    </Packet>
+
+    <Packet type="ReceiveJobSubcommands" delay="20">
+        <Data type="command-code" value="03" mutable="true" />
+        <Size type="count" value="35" valueType="string" diff="-1" mutable="true" ref="FileContent" />
+        <Data type="sp" value="20" mutable="true" />
+        <Data type="name" value="64 66 42 33 33 37 68 6f 73 74 6e 61 6d 65" mutable="true" />
+        <Data type="lf" value="0a" mutable="true" />
+    </Packet>
+
+    <!-- <Packet name="FileContent" type="File" delay="00">
+        <Data value="1b 25 2d 31 32 33 34 35 58 40 50 4a 4c 20 4a 4f 42 4e 41 4d 45 3d 68 70 6c 69 70 5f 75 73 65 72 5f 32 34 0a 40 50 4a 4c 20 53 45 54 20 55 53 45 52 4e 41 4d 45 3d 22 75 73 65 72 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 4e 41 4d 45 3d 22 55 6e 74 69 74 6c 65 64 20 31 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 31 3d 75 73 65 72 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 32 3d 75 73 65 72 2d 51 69 54 69 61 6e 4d 35 34 30 2d 41 37 33 39 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 33 3d 75 6e 6b 6e 6f 77 6e 5f 64 6f 6d 61 69 6e 5f 6e 61 6d 65 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 34 3d 32 30 32 34 30 33 32 35 30 33 30 31 33 36 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 35 3d 75 72 6e 3a 75 75 69 64 3a 35 34 65 62 39 36 63 38 2d 39 32 34 33 2d 33 64 30 62 2d 36 30 38 64 2d 35 62 32 32 31 63 34 37 62 66 64 66 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 36 3d 48 50 20 4c 69 6e 75 78 20 50 72 69 6e 74 69 6e 67 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 37 3d 48 50 20 4c 69 6e 75 78 20 50 72 69 6e 74 69 6e 67 22 0a 40 50 4a 4c 20 53 45 54 20 4a 4f 42 41 54 54 52 3d 22 4a 6f 62 41 63 63 74 38 3d 75 73 65 72 22 0a 40 50 4a 4c 20 44 4d 49 4e 46 4f 20 41 53 43 49 49 48 45 58 3d 22 30 34 30 30 30 34 30 31 30 31 30 32 30 44 31 30 31 30 30 31 31 35 33 32 33 30 33 32 33 34 33 30 33 33 33 32 33 35 33 30 33 33 33 30 33 31 33 33 33 36 22 0a 40 50 4a 4c 20 53 45 54 20 45 43 4f 4e 4f 4d 4f 44 45 3d 4f 46 46 0a 40 50 4a 4c 20 53 45 54 20 52 45 53 4f 4c 55 54 49 4f 4e 3d 36 30 30 0a 40 50 4a 4c 20 53 45 54 20 42 49 54 53 50 45 52 50 49 58 45 4c 3d 32 0a 40 50 4a 4c 20 53 45 54 20 52 45 53 4f 4c 55 54 49 4f 4e 3d 36 30 30 0a 40 50 4a 4c 20 53 45 54 20 42 49 54 53 50 45 52 50 49 58 45 4c 3d 32 0a 40 50 4a 4c 20 45 4e 54 45 52 20 4c 41 4e 47 55 41 47 45 3d 50 4f 53 54 53 43 52 49 50 54 0a 25 21 50 53 2d 41 64 6f 62 65 2d 33 2e 30 0a 25 25 45 4f 46 0a 04 1b 25 2d 31 32 33 34 35 58 40 50 4a 4c 20 45 4f 4a 0a 1b 25 2d 31 32 33 34 35 58 00" mutable="false" />
+    </Packet> -->
+    <Packet name="FileContent" type="File" delay="40">
+        <Data value="20 20 20 20 20 00" />
+    </Packet>
+
+    <!-- <Packet type="DeamonCommands" delay="40">
+        <Data type="command-code" value="05" mutable="true" />
+        <Data type="queue_name" value="6c 70" mutable="true" />
+        <Data type="sp" value="20" mutable="true" />
+        <Data type="name" value="72 6f 6f 74" mutable="true" />
+        <Data type="sp2" value="20" mutable="true" />
+        <Data type="job_number" value="33 33 37" mutable="true" />
+        <Data type="lf" value="0a" mutable="true" />
+    </Packet> -->
+
+    <!-- <Packet type="ReceiveJobSubcommands" delay="20">
+        <Data type="command-code" value="01" mutable="true" />
+        <Data type="lf" value="0a" mutable="true" />
+    </Packet> -->
+</Sequence>

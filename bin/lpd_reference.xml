@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+
+<Reference>
+
+<PacketSeries type="DaemonCommands">
+
+    <Packet>
+        <Id type="command-code">
+            <Value>04</Value>
+        </Id>
+        <Para type="command-code" mutation="range" len="1" min="00" max="06">
+        </Para>
+        <Para type="queue_name" mutation="binary" len="2">
+            <Value>6c 70</Value>
+        </Para>
+        <Para type="sp" mutation="binary" len="1">
+            <Value>20</Value>
+        </Para>
+        <Para type="name" mutation="binary" len="4">
+            <Value>72 6f 6f 74</Value>
+        </Para>
+        <Para type="sp" mutation="binary" len="1">
+            <Value>0a</Value>
+        </Para>
+    </Packet>
+
+    <Packet>
+        <Id type="command-code">
+            <Value>03</Value>
+        </Id>
+        <Para type="command-code" mutation="range" len="1" min="00" max="06">
+        </Para>
+        <Para type="queue_name" mutation="binary" len="2">
+            <Value>6c 70</Value>
+        </Para>
+        <Para type="sp" mutation="binary" len="1">
+            <Value>20</Value>
+        </Para>
+        <Para type="name" mutation="binary" len="4">
+            <Value>72 6f 6f 74</Value>
+        </Para>
+        <Para type="sp" mutation="binary" len="1">
+            <Value>0a</Value>
+        </Para>
+    </Packet>
+
+    <Packet>
+        <Id type="command-code">
+            <Value>02</Value>
+        </Id>
+        <Para type="command-code" mutation="range" len="1" min="00" max="06">
+        </Para>
+        <Para type="queue_name" mutation="binary" len="2">
+            <Value>6c 70</Value>
+        </Para>
+        <Para type="sp" mutation="binary" len="1">
+            <Value>0a</Value>
+        </Para>
+    </Packet>
+
+</PacketSeries>
+
+<PacketSeries type="ReceiveJobSubcommands">
+
+    <Packet>
+        <Para type="command-code" mutation="range" len="1" min="00" max="04">
+        </Para>
+    </Packet>
+
+</PacketSeries>
+
+<PacketSeries type="ControlFileLines">
+    
+    <Packet>
+        <Para type="command-code" mutation="case" len="1">
+            <case value="43" weight="0.03" />
+            <case value="48" weight="0.05" />
+            <case value="49" weight="0.03" />
+            <case value="4a" weight="0.05" />
+            <case value="4c" weight="0.03" />
+            <case value="4d" weight="0.03" />
+            <case value="4e" weight="0.05" />
+            <case value="50" weight="0.05" />
+            <case value="53" weight="0.03" />
+            <case value="54" weight="0.03" />
+            <case value="55" weight="0.05" />
+            <case value="57" weight="0.03" />
+            <case value="31" weight="0.03" />
+            <case value="32" weight="0.03" />
+            <case value="33" weight="0.03" />
+            <case value="34" weight="0.03" />
+            <case value="63" weight="0.03" />
+            <case value="64" weight="0.03" />
+            <case value="66" weight="0.03" />
+            <case value="67" weight="0.03" />
+            <case value="6b" weight="0.03" />
+            <case value="6c" weight="0.05" />
+            <case value="6e" weight="0.03" />
+            <case value="6f" weight="0.03" />
+            <case value="70" weight="0.03" />
+            <case value="72" weight="0.03" />
+            <case value="74" weight="0.03" />
+            <case value="76" weight="0.03" />
+            <case value="7a" weight="0.03" />
+        </Para>
+    </Packet>
+
+</PacketSeries>
+
+</Reference>
