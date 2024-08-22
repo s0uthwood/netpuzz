@@ -33,9 +33,9 @@ Run the binary with following commands:
 | Vul-6 | HP M232DWC | Crash caused by crafted IPP packets | - | - |
 | Vul-7 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-17422 | High | 
 | Vul-8 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-17672 | High | 
-| Vul-9 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25055 | High | 
-| Vul-10 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25518 | High | 
-| Vul-11 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25683 | High | 
+| Vul-9 | HP M227FDW | Crash caused by crafted IPP packets | CNVD-2024-25055 | High | 
+| Vul-10 | HP M227FDW | Crash caused by crafted IPP packets | CNVD-2024-25518 | High | 
+| Vul-11 | HP M227FDW | Crash caused by crafted IPP packets | CNVD-2024-25683 | High | 
 | Vul-12 | Lenovo M101DW | Crash caused by crafted LPD packets | CVE-2024-27912 | High | 
 | Vul-13 | Lenovo M101DW | Crash caused by crafted LPD packets | CVE-2024-4782 | Medium |
 | Vul-14 | Lenovo M101DW | Crash caused by crafted IPP packets | CVE-2024-5209 | Medium |
@@ -43,10 +43,14 @@ Run the binary with following commands:
 | Vul-16 | Lenovo LJ2320DN | Crash caused by crafted LPD packets | CVE-2024-27912 | High | 
 | Vul-17 | Lenovo LJ2320DN | Hang caused by crafted LPD packets | CVE-2024-4781 | Medium |
 | Vul-18 | Lenovo LJ2320DN | Hang caused by crafted LPD packets | CVE-2024-5210 | Medium |
-| Vul-19 | Xerox CP228W | Crash caused by crafted LPD packets | CNVD-2024-07424 | High | 
-| Vul-20 | Xerox CP228W | Crash caused by crafted LPD packets | CNVD-2024-18101 | High | 
+| Vul-19 | Xerox CP228W | Hang caused by crafted LPD packets | CNVD-2024-07424 | High | 
+| Vul-20 | Xerox CP228W | Busy wait caused by crafted LPD packets | CNVD-2024-18101 | High | 
 | Vul-21 | Xerox CP228W | Crash caused by crafted IPP packets | CNVD-2024-24315 | High | 
 | Vul-22 | Xerox CP228W | Crash caused by crafted LPD packets | CNVD-2024-34726 | High | 
 | Vul-23 | Pantum M6760DW | Crash caused by crafted IPP packets | CNVD-2024-07423 | High | 
 | Vul-24 | Pantum M6760DW | Hang caused by crafted LPD packets | CNVD-2024-21971 | High | 
 | Vul-25 | Pantum M6760DW | Cartridge unusable caused by crafted IPP packets | - | - |
+
+## Vulnerability videos
+
+We recorded a demo video for each vulnerability. Since some of the vulnerabilities are not yet fixed, we masked the parts of the video that contains PoCs.
