@@ -48,5 +48,5 @@ Run the binary with following commands:
 | Vul-21 | Xerox CP228W | Crash caused by crafted IPP packets | CNVD-2024-24315 | High | 
 | Vul-22 | Xerox CP228W | Crash caused by crafted LPD packets | CNVD-2024-34726 | High | 
 | Vul-23 | Pantum M6760DW | Crash caused by crafted IPP packets | CNVD-2024-07423 | High | 
-| Vul-24 | Pantum M6760DW | Crash caused by crafted LPD packets | CNVD-2024-21971 | High | 
+| Vul-24 | Pantum M6760DW | Hang caused by crafted LPD packets | CNVD-2024-21971 | High | 
 | Vul-25 | Pantum M6760DW | Cartridge unusable caused by crafted IPP packets | - | - |
