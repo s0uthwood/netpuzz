@@ -8,7 +8,7 @@
 
 ## Usage
 
-The fuzzing log will saved in `fuzz_data` folder. Thus, create a new folder before running the fuzzer.
+The fuzzing log will saved in `fuzz_data` folder. So we need to create a `fuzz_data` folder before running the fuzzer.
 
 ```shell
 cd bin && mkdir fuzz_data
@@ -22,6 +22,8 @@ Run the binary with following commands:
 ```
 
 ## Found vulnerabilities
+
+The following table list all the vulnerabilities we found in this work. We also recorded a demo video for each vulnerability. Since some of the vulnerabilities are not yet fixed, we masked the parts of the video that contains PoCs.
 
 | ID | Network Printer | Description | CVE/CNVD | Impact |
 | :-- | :------------- | :---------- | :------- | :----- |
@@ -50,7 +52,3 @@ Run the binary with following commands:
 | Vul-23 | Pantum M6760DW | Crash caused by crafted IPP packets | CNVD-2024-07423 | High | 
 | Vul-24 | Pantum M6760DW | Hang caused by crafted LPD packets | CNVD-2024-21971 | High | 
 | Vul-25 | Pantum M6760DW | Cartridge unusable caused by crafted IPP packets | - | - |
-
-## Vulnerability videos
-
-We recorded a demo video for each vulnerability. Since some of the vulnerabilities are not yet fixed, we masked the parts of the video that contains PoCs.
