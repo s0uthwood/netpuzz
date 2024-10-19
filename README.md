@@ -1,4 +1,4 @@
-# NetPuzz: Testing Network Printers vis Fully Black-Box and Coverage-Guided Protocol Fuzzing
+# NetPuzz: Testing Network Printers via Fully Black-Box and Coverage-Guided Protocol Fuzzing
 
 ## Experimental Environment
 
