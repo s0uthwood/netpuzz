@@ -52,8 +52,10 @@ struct IppResponse : Response {
     void parseAttributeGroup(TcpData response);
     void statusMessageFilter();
     bool isDelimiterTag(uint8_t tag_id);
+    
     void print() override;
 };
+double IppDistance(const std::shared_ptr<IppResponse>& seq1, const std::shared_ptr<IppResponse>& seq2);
 
 struct LpdResponse : Response {
     std::vector<u8> data;
@@ -71,5 +73,6 @@ struct LpdResponse : Response {
     void parse(TcpData response);
     void print() override;
 };
+double LpdDistance(const std::shared_ptr<LpdResponse>& seq1, const std::shared_ptr<LpdResponse>& seq2);
 
 #endif  // INCLUDE_FUZZER_RESPONSE_HPP_

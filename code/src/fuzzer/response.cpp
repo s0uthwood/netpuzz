@@ -30,7 +30,6 @@ IppResponse::IppResponse(TcpData data) {
     status_code = 0xeeee;
     request_id = 0;
     attribute_groups.clear();
-    // printf("[+] In IppResponse:\n");
     // std::cout << data.dataToHex() << std::endl;
     parse(data);
 }
@@ -61,7 +60,6 @@ void IppResponse::dechunk(TcpData *http_body) {
     TcpData result;
     int i = 0;
     while (http_body->data_len > 0) {
-        // printf("[+] %s\n", http_body->dataToHex().c_str());
         int cur_chunk_len = read_chunk_len(&(http_body->data_ptr[i]));
         // if return -1, is not chunk format
         if (cur_chunk_len == -1) {
@@ -112,9 +110,6 @@ void IppResponse::parse(TcpData response) {
     if (response.data_len == 0) {
         return;
     }
-    // printf("[Before dechunk] %s\n", response.dataToHex().c_str());
-    // printf("http_code: %d\n", http_code);
-    // printf("[0] %s\n", response.dataToHex().c_str());
     if (response.data_len < 2 || http_code != 200) {
         return;
     }
@@ -141,22 +136,9 @@ void IppResponse::parse(TcpData response) {
     }
     request_id = response.data_ptr[0] << 24 | response.data_ptr[1] << 16 | response.data_ptr[2] << 8 | response.data_ptr[3];
     response.cut(0, 4);
-    // * ipp attribute groups
-    // printf("[+] Debug: before parseAttributeGroup()\n");
-    // for (int i = 0; i < response.data_len; ++i) {
-    //     printf("%c", response.data_ptr[i]);
-    // }
-    // printf("\n");
-    // if (version_number < 0x100 || version_number > 0x220) {
-    //     printf("!!! Response Format ERROR !!!\n");
-    //     return;
-    // }
-    printf("[Debug] Before parseAttribute\n");
     parseAttributeGroup(response);
-    printf("[Debug] After parseAttribute\n");
     // delete extra message in status-message
     statusMessageFilter();
-    printf("[Debug] Finish parse\n");
     return;
 }
 
@@ -221,31 +203,22 @@ void IppResponse::parseAttributeGroup(TcpData response) {
 void IppResponse::statusMessageFilter() {
     for (auto &group : attribute_groups) {
         for (auto &attr : group.attributes) {
-            // printf("attr.name=%s\n", attr.name.c_str());
             if (attr.name == "status-message") {
                 printf("attr.value.size()=%zu\n", attr.value.size());
                 printf("attr.value=%s\n", std::string(attr.value.begin(), attr.value.end()).c_str());
                 // if status-message start with "Bad request version number", delete following data
                 if (attr.value.size() >= 25 && std::equal(attr.value.begin(), attr.value.begin() + 25, "Bad request version number")) {
                     // delete data after "Bad request version number"
-                    printf("[+] Bad request version number!!!\n");
-                    printf("[+] attr.value=%s\n", std::string(attr.value.begin(), attr.value.end()).c_str());
                     attr.value.erase(attr.value.begin() + 25, attr.value.end());
                 } else if (attr.value.size() >= 13 && std::equal(attr.value.begin(), attr.value.begin() + 13, "Bad request-id")) {
                     // delete data after "Bad request version number"
-                    printf("[+] Bad request-id!!!\n");
                     attr.value.erase(attr.value.begin() + 13, attr.value.end());
-                    printf("[+] attr.value=%s\n", std::string(attr.value.begin(), attr.value.end()).c_str());
                 } else {
                     // find if there is a \" in attr.value
-                    printf("[+] found \"\n");
                     auto it = std::find(attr.value.begin(), attr.value.end(), '\"');
                     if (it != attr.value.end()) {
                         // delete data after \"
                         attr.value.erase(it, attr.value.end());
-                        printf("[+] attr.value=%s\n", std::string(attr.value.begin(), attr.value.end()).c_str());
-                    } else {
-                        printf("[+] not found \"\n");
                     }
                 }
             }
@@ -259,7 +232,65 @@ bool IppResponse::isDelimiterTag(uint8_t tag_id) {
 
 void IppResponse::print() {
     std::cout << to_string() << std::endl;
-    // to_string();
+}
+
+double IppDistance(const std::shared_ptr<IppResponse>& seq1, const std::shared_ptr<IppResponse>& seq2) {
+    if (seq1->http_code != seq2->http_code || seq1->status_code != seq2->status_code) {
+        return 1;
+    }
+    
+    std::string value1_printer_state, value2_printer_state;
+    std::string value1_status_message, value2_status_message;
+    bool found_printer_state_1 = false, found_printer_state_2 = false;
+    bool found_status_message_1 = false, found_status_message_2 = false;
+    
+    for (const auto& group : seq1->attribute_groups) {
+        for (const auto& attr : group.attributes) {
+            if (attr.name == "printer-state") {
+                found_printer_state_1 = true;
+                value1_printer_state = std::string(attr.value.begin(), attr.value.end());
+            } else if (attr.name == "status-message") {
+                found_status_message_1 = true;
+                value1_status_message = std::string(attr.value.begin(), attr.value.end());
+            }
+            if (found_printer_state_1 && found_status_message_1) {
+                break;
+            }
+        }
+        if (found_printer_state_1 && found_status_message_1) {
+            break;
+        }
+    }
+
+    for (const auto& group : seq2->attribute_groups) {
+        for (const auto& attr : group.attributes) {
+            if (attr.name == "printer-state") {
+                found_printer_state_2 = true;
+                value2_printer_state = std::string(attr.value.begin(), attr.value.end());
+            } else if (attr.name == "status-message") {
+                found_status_message_2 = true;
+                value2_status_message = std::string(attr.value.begin(), attr.value.end());
+            }
+            if (found_printer_state_2 && found_status_message_2) {
+                break;
+            }
+        }
+        if (found_printer_state_2 && found_status_message_2) {
+            break;
+        }
+    }
+
+    if ((!found_printer_state_1 &&!found_printer_state_2) || (!found_status_message_1 &&!found_status_message_2)) {
+        return 0;
+    }
+
+    if ((found_printer_state_1!= found_printer_state_2) || (found_status_message_1!= found_status_message_2)) {
+        return 1;
+    }
+
+    double similarity_printer_state = stringSimilarity(value1_printer_state, value2_printer_state);
+    double similarity_status_message = stringSimilarity(value1_status_message, value2_status_message);
+    return 1 - (similarity_printer_state + similarity_status_message) / 2;
 }
 
 std::string IppResponse::to_string() {
@@ -380,4 +411,21 @@ void LpdResponse::parse(TcpData response) {
         data.push_back(response.data_ptr[i]);
     }
     return;
+}
+
+double LpdDistance(const std::shared_ptr<LpdResponse>& seq1, const std::shared_ptr<LpdResponse>& seq2) {
+    int len1 = seq1->data.size();
+    int len2 = seq2->data.size();
+    if (len1 == 1) {
+        if (len2 != 1) {
+            return 1;
+        }
+        return seq1->data[0] != seq2->data[0];
+    } else {
+        if (len2 == 1) {
+            return 1;
+        }
+        return stringSimilarity(std::string(seq1->data.begin(), seq1->data.end()), 
+                                std::string(seq2->data.begin(), seq2->data.end()));
+    }
 }

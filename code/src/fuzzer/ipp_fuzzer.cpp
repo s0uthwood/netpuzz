@@ -115,29 +115,29 @@ std::vector<TcpData> IPPFuzzer::sendAndRecv(TestCase &testCase) {
 bool IPPFuzzer::isInteresting(std::vector<std::shared_ptr<Response>> responses) {
     const double similarity_threshold = 0.1;
     
-    std::vector<std::shared_ptr<IppResponse>> ippResponses;
+    std::vector<std::shared_ptr<IppResponse>> ipp_responses;
     for (const auto& response : responses) {
-        auto ippResponse = std::dynamic_pointer_cast<IppResponse>(response);
-        if (!ippResponse) {
+        auto ipp_response = std::dynamic_pointer_cast<IppResponse>(response);
+        if (!ipp_response) {
             throw std::invalid_argument("All responses must be of type IppResponse");
         }
-        ippResponses.push_back(ippResponse);
+        ipp_responses.push_back(ipp_response);
     }
 
     for (auto & seed_responses : seed_pool.seedPool) {
         std::vector<std::shared_ptr<IppResponse>> seed_ipp_responses;
         for (const auto& seed_response : seed_responses.responses) {
-            auto seedIppResponse = std::dynamic_pointer_cast<IppResponse>(seed_response);
-            if (!seedIppResponse) {
+            auto seed_ipp_response = std::dynamic_pointer_cast<IppResponse>(seed_response);
+            if (!seed_ipp_response) {
                 throw std::invalid_argument("All seed responses must be of type IppResponse");
             }
-            seed_ipp_responses.push_back(seedIppResponse);
+            seed_ipp_responses.push_back(seed_ipp_response);
         }
 
         if (responses.size() == 0) {
             return false;
         }
-        double distance = shapeDTW(seed_ipp_responses, ippResponses);
+        double distance = shapeDTW(seed_ipp_responses, ipp_responses, IppDistance);
         double similarity = distance / std::max(seed_responses.responses.size(), responses.size());
         if (similarity < similarity_threshold) {
             return false;

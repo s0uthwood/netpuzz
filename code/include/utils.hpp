@@ -4,8 +4,10 @@
 #include <string>
 #include <vector>
 #include <limits>
+#include <functional>
 
 #include "./defines.hpp"
+#include "fuzzer/response.hpp"
 
 std::string getCurrentTime();
 
@@ -20,13 +22,13 @@ std::string toLower(const std::string &str);
 
 std::string executeCommand(const std::string &command);
 
-template <typename T>
-double binaryDistance(const T& a, const T& b) {
-    return (*a) == (*b) ? 0.0 : 1.0;
-}
+double stringSimilarity(const std::string& s1, const std::string& s2);
 
 template <typename T>
-double shapeDTW(const std::vector<T>& seq1, const std::vector<T>& seq2){
+using DistanceFunc = double(*)(const T&, const T&);
+
+template <typename T>
+double shapeDTW(const std::vector<T>& seq1, const std::vector<T>& seq2, DistanceFunc<T> distanceMetric){
     size_t len1 = seq1.size();
     size_t len2 = seq2.size();
     std::vector<std::vector<double>> dtw(len1 + 1, std::vector<double>(len2 + 1, std::numeric_limits<double>::max()));
@@ -34,7 +36,7 @@ double shapeDTW(const std::vector<T>& seq1, const std::vector<T>& seq2){
 
     for (size_t i = 1; i <= len1; ++i) {
         for (size_t j = 1; j <= len2; ++j) {
-            double cost = binaryDistance(seq1[i - 1], seq2[j - 1]);
+            double cost = distanceMetric(seq1[i - 1], seq2[j - 1]);
             dtw[i][j] = cost + std::min(std::min(dtw[i - 1][j], dtw[i][j - 1]), dtw[i - 1][j - 1]);
         }
     }

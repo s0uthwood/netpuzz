@@ -84,7 +84,7 @@ bool LPDFuzzer::isInteresting(std::vector<std::shared_ptr<Response>> responses) 
         if (responses.size() == 0) {
             return false;
         }
-        double distance = shapeDTW(seed_lpd_responses, lpd_responses);
+        double distance = shapeDTW(seed_lpd_responses, lpd_responses, LpdDistance);
         double similarity = distance / std::max(seed_responses.responses.size(), responses.size());
         if (similarity < similarity_threshold) {
             return false;
