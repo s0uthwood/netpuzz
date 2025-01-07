@@ -1,16 +1,19 @@
-# NetPuzz: Testing Network Printers via Fully Black-Box and Coverage-Guided Protocol Fuzzing
+# NetPuzz: Testing Network Printers via Fully Black-Box and Sequence-Tree-Based Protocol Fuzzing
 
 ## Experimental Environment
 
 - Operating system: Ubuntu 20.04
 - Physical memory: 32GB
-- Computer: x86-64 dwsktop with AMD 8-Core Processor
+- Computer: x86-64 desktop with AMD 8-Core Processor
 
 ## Usage
 
 The fuzzing log will saved in `fuzz_data` folder. So we need to create a `fuzz_data` folder before running the fuzzer.
 
 ```shell
+sudo apt update
+sudo apt install snmp
+pip install git+https://github.com/rytilahti/python-miio.git
 cd bin && mkdir fuzz_data
 ```
 
