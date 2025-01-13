@@ -33,7 +33,7 @@ The following table list all the vulnerabilities we found in this work. We also 
 | Vul-1 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-07425 | High |
 | Vul-2 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-07426 | High | 
 | Vul-3 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25238 | High | 
-| Vul-4 | HP M232DWC | Busy wait caused by crafted IPP packets | CNVD-2024-16745 | High | 
+| Vul-4 | HP M232DWC | Busy wait caused by crafted IPP packets | CVE-2024-9423 | High | 
 | Vul-5 | HP M232DWC | Crash caused by crafted IPP packets | CNVD-2024-26735 | High | 
 | Vul-6 | HP M232DWC | Crash caused by crafted IPP packets | - | - |
 | Vul-7 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-17422 | High | 
