@@ -33,12 +33,12 @@ The following table list all the vulnerabilities we found in this work. We also 
 | Vul-1 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-07425 | High |
 | Vul-2 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-07426 | High | 
 | Vul-3 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25238 | High | 
-| Vul-4 | HP M232DWC | Busy wait caused by crafted IPP packets | CVE-2024-9423 | High | 
+| Vul-4 | HP M232DWC | Busy wait caused by crafted IPP packets | CVE-2024-9423 | Medium | 
 | Vul-5 | HP M232DWC | Crash caused by crafted IPP packets | CNVD-2024-26735 | High | 
 | Vul-6 | HP M232DWC | Crash caused by crafted IPP packets | - | - |
 | Vul-7 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-17422 | High | 
 | Vul-8 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-17672 | High | 
-| Vul-9 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2025-1004 | High | 
+| Vul-9 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CVE-2025-1004 | Medium | 
 | Vul-10 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25518 | High | 
 | Vul-11 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25683 | High | 
 | Vul-12 | Lenovo M101DW | Crash caused by crafted LPD packets | CVE-2024-27912 | High | 
