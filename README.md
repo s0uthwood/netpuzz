@@ -34,7 +34,7 @@ The following table list all the vulnerabilities we found in this work. We also 
 | Vul-2 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-07426 | High | 
 | Vul-3 | HP M202DW | Auto-reboot caused by crafted IPP packets | CNVD-2024-25238 | High | 
 | Vul-4 | HP M232DWC | Busy wait caused by crafted IPP packets | CVE-2024-9423 | Medium | 
-| Vul-5 | HP M232DWC | Crash caused by crafted IPP packets | CNVD-2024-26735 | High | 
+| Vul-5 | HP M232DWC | Crash caused by crafted IPP packets | CVE-2025-2268 | Medium | 
 | Vul-6 | HP M232DWC | Crash caused by crafted IPP packets | - | - |
 | Vul-7 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-17422 | High | 
 | Vul-8 | HP M227FDW | Auto-reboot caused by crafted IPP packets | CNVD-2024-17672 | High | 
@@ -48,7 +48,7 @@ The following table list all the vulnerabilities we found in this work. We also 
 | Vul-16 | Lenovo LJ2320DN | Crash caused by crafted LPD packets | CNVD-2024-23047 | High | 
 | Vul-17 | Lenovo LJ2320DN | Hang caused by crafted LPD packets | CVE-2024-4781 | Medium |
 | Vul-18 | Lenovo LJ2320DN | Hang caused by crafted LPD packets | CVE-2024-5210 | Medium |
-| Vul-19 | Xerox CP228W | Hang caused by crafted LPD packets | CNVD-2024-45320 | High | 
+| Vul-19 | Xerox CP228W | Hang caused by crafted LPD packets | CVE-2024-45320 | Medium | 
 | Vul-20 | Xerox CP228W | Busy wait caused by crafted IPP packets | CNVD-2024-18101 | High | 
 | Vul-21 | Xerox CP228W | Crash caused by crafted IPP packets | CNVD-2024-24315 | High | 
 | Vul-22 | Xerox CP228W | Crash caused by crafted LPD packets | CNVD-2024-34726 | High | 
