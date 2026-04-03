@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+
+<Reference>
+
+    <PacketSeries type="IppAttributes">
+
+        <Packet>
+            <Para type="Attributes.delimiter-tag" mutation="range" len="1" min="00" max="06">
+            </Para>
+            <Para type="Attributes.Attribute.attr-tag" mutation="range" len="1" min="10" max="5F">
+            </Para>
+            <Para type="Attributes.OperationAttributes.Attributes.attr-tag" mutation="range" len="1" min="10" max="5F">
+            </Para>
+            <Para type="Attributes.JobAttributes.Attribute.attr-tag" mutation="range" len="1" min="10" max="5F">
+            </Para>
+        </Packet>
+
+    </PacketSeries>
+
+    <PacketSeries type="Attribute">
+
+        <Packet>
+            <Id type="attr-tag" >
+                <Value>21</Value>
+            </Id>
+            <Para type="attr-key-length" mutation="binary" len="2" >
+                <Value>00 06</Value>
+            </Para>
+            <Para type="attr-key" mutation="binary" len="6" >
+                <Value>63 6f 70 69 65 73</Value>
+            </Para>
+            <Para type="attr-value-length" mutation="binary" len="2" >
+                <Value>00 04</Value>
+            </Para>
+            <Para type="attr-value" mutation="binary" len="4" >
+                <Value>00 00 00 01</Value>
+            </Para>
+        </Packet>
+
+        <Packet>
+            <Id type="attr-tag" >
+                <Value>42</Value>
+            </Id>
+            <Para type="attr-key-length" mutation="binary" len="2" >
+                <Value>00 14</Value>
+            </Para>
+            <Para type="attr-key" mutation="binary" len="20" >
+                <Value>72 65 71 75 65 73 74 69 6e 67 2d 75 73 65 72 2d 6e 61 6d 65</Value>
+            </Para>
+            <Para type="attr-value-length" mutation="binary" len="2" >
+                <Value>00 04</Value>
+            </Para>
+            <Para type="attr-value" mutation="binary" len="4" >
+                <Value>74 75 74 75</Value>
+            </Para>
+        </Packet>
+
+        <Packet>
+            <Id type="attr-tag" >
+                <Value>45</Value>
+            </Id>
+            <Para type="attr-key-length" mutation="binary" len="2" >
+                <Value>00 0B</Value>
+            </Para>
+            <Para type="attr-key" mutation="binary" len="11" >
+                <Value>70 72 69 6e 74 65 72 2d 75 72 69</Value>
+            </Para>
+            <Para type="attr-value-length" mutation="binary" len="2" >
+                <Value>00 20</Value>
+            </Para>
+            <Para type="attr-value" mutation="binary" len="32" >
+                <Value>69 70 70 3a 2f 2f 31 39 32 2e 31 36 38 2e 31 2e 39 39 3a 36 33 31 2f 69 70 70 2f 70 72 69 6e 74</Value>
+            </Para>
+        </Packet>
+
+        <Packet>
+            <Id type="attr-tag" >
+                <Value>47</Value>
+            </Id>
+            <Para type="attr-key-length" mutation="binary" len="2" >
+                <Value>00 12</Value>
+            </Para>
+            <Para type="attr-key" mutation="binary" len="18" >
+                <Value>61 74 74 72 69 62 75 74 65 73 2d 63 68 61 72 73 65 74</Value>
+            </Para>
+            <Para type="attr-value-length" mutation="binary" len="2" >
+                <Value>00 05</Value>
+            </Para>
+            <Para type="attr-value" mutation="binary" len="5" >
+                <Value>75 74 66 2d 38</Value>
+            </Para>
+        </Packet>
+
+        <Packet>
+            <Id type="attr-tag" >
+                <Value>48</Value>
+            </Id>
+            <Para type="attr-key-length" mutation="binary" len="2" >
+                <Value>00 1B</Value>
+            </Para>
+            <Para type="attr-key" mutation="binary" len="27" >
+                <Value>61 74 74 72 69 62 75 74 65 73 2d 6e 61 74 75 72 61 6c 2d 6c 61 6e 67 75 61 67 65</Value>
+            </Para>
+            <Para type="attr-value-length" mutation="binary" len="2" >
+                <Value>00 02</Value>
+            </Para>
+            <Para type="attr-value" mutation="binary" len="2" >
+                <Value>65 6E</Value>
+            </Para>
+        </Packet>
+
+        <Packet>
+            <Id type="attr-tag" >
+                <Value>49</Value>
+            </Id>
+            <Para type="attr-key-length" mutation="binary" len="2" >
+                <Value>00 0F</Value>
+            </Para>
+            <Para type="attr-key" mutation="binary" len="15" >
+                <Value>64 6f 63 75 6d 65 6e 74 2d 66 6f 72 6d 61 74</Value>
+            </Para>
+            <Para type="attr-value-length" mutation="binary" len="2" >
+                <Value>00 18</Value>
+            </Para>
+            <Para type="attr-value" mutation="binary" len="24" >
+                <Value>61 70 70 6c 69 63 61 74 69 6f 6e 2f 6f 63 74 65 74 2d 73 74 72 65 61 6d</Value>
+            </Para>
+        </Packet>
+
+    </PacketSeries>
+
+</Reference>

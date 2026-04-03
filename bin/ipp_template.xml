@@ -1,0 +1,1010 @@
+<?xml version="1.0"?>
+<Sequence>
+
+    <Packet type="IppAttributes" name="IppGetPrinterAttributesPacket1" delay="b0 04" >
+        <Data name="HttpHeader" value="50 4f 53 54 20 2f 69 70 70 2f 70 72 69 6e 74 20 48 54 54 50 2f 31 2e 31 0d 0a 43 6f 6e 74 65 6e 74 2d 4c 65 6e 67 74 68 3a 20" mutable="false" />
+        <Size value="37 31 35" valueType="string" mutable="false" ref="IppGetPrinterAttributesPacket1.Attributes"/>
+        <Data value="0d 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 69 70 70 0d 0a 44 61 74 65 3a 20 4d 6f 6e 2c 20 31 31 20 44 65 63 20 32 30 32 33 20 31 32 3a 33 39 3a 30 38 20 47 4d 54 0d 0a 48 6f 73 74 3a 20 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 43 55 50 53 2f 32 2e 33 2e 31 20 28 4c 69 6e 75 78 20 35 2e 31 35 2e 30 2d 38 39 2d 67 65 6e 65 72 69 63 3b 20 78 38 36 5f 36 34 29 20 49 50 50 2f 32 2e 30 0d 0a 45 78 70 65 63 74 3a 20 31 30 30 2d 63 6f 6e 74 69 6e 75 65 0d 0a 0d 0a" mutable="false" />
+        <Block type="Attributes" name="Attributes">
+            <Data type="version" name="version" value="02 00" mutable="true" />
+            <Data type="operation-id" name="operation-id" value="00 0b" mutable="true" />
+            <Data type="request-id" name="request-id" value="00 00 00 01" mutable="true" />
+            <Data type="delimiter-tag" name="operation-attributes-tag" value="01" mutable="true"/> <!-- operation-attributes-tag -->
+            <Block type="OperationAttributes" name="OperationAttributes">
+                <Block type="Attribute" name="Charset" > <!-- CharsetAttribute -->
+                    <Data type="attr-tag" value="47" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.Charset.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 63 68 61 72 73 65 74" mutable="true"/>
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.Charset.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 74 66 2d 38" mutable="true"/>
+                </Block>
+                <Block type="Attribute" name="Language" > <!-- LanguageAttribute -->
+                    <Data type="attr-tag" value="48" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1b" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.Language.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 6e 61 74 75 72 61 6c 2d 6c 61 6e 67 75 61 67 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.Language.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="65 6e 2d 67 62" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="Uri"> <!-- UriAttribute -->
+                    <Data type="attr-tag" value="45" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0B" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.Uri.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 65 72 2d 75 72 69" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.Uri.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="69 70 70 3a 2f 2f 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 2f 69 70 70 2f 70 72 69 6e 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword0">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword0.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 65 64 2d 61 74 74 72 69 62 75 74 65 73" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 15" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword0.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="63 6f 6d 70 72 65 73 73 69 6f 6e 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword1">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword1.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 10" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword1.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="63 6f 70 69 65 73 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword2">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword2.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword2.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="63 75 70 73 2d 76 65 72 73 69 6f 6e" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword3">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword3.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword3.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="64 6f 63 75 6d 65 6e 74 2d 66 6f 72 6d 61 74 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword4">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 21" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 70 61 73 73 77 6f 72 64 2d 65 6e 63 72 79 70 74 69 6f 6e 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword5">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword5.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword5.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 63 6f 6c 6f 72 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword6">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword6.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword6.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 68 69 67 68 2d 6c 65 76 65 6c 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword7">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword7.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword7.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6c 65 76 65 6c 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword8">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword8.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 11" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword8.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6c 6f 77 2d 6c 65 76 65 6c 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword9">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword9.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0e" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword9.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6d 65 73 73 61 67 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword11">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword11.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword11.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6e 61 6d 65 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword12">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword12.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword12.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 74 79 70 65 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword13">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword13.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 13" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword13.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 63 6f 6c 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword14">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword14.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 24" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword14.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 75 6c 74 69 70 6c 65 2d 64 6f 63 75 6d 65 6e 74 2d 68 61 6e 64 6c 69 6e 67 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword15">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword15.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword15.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6f 70 65 72 61 74 69 6f 6e 73 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword16">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword16.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 1a" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword16.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 2d 63 6f 6c 6f 72 2d 6d 6f 64 65 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword17">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword17.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword17.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 61 6c 65 72 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword18">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword18.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword18.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 61 6c 65 72 74 2d 64 65 73 63 72 69 70 74 69 6f 6e" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword19">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword19.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword19.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 69 73 2d 61 63 63 65 70 74 69 6e 67 2d 6a 6f 62 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword20">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword20.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword20.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 6d 61 6e 64 61 74 6f 72 79 2d 6a 6f 62 2d 61 74 74 72 69 62 75 74 65 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword21">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword21.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword21.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 73 74 61 74 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword22">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword22.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 15" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword22.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 73 74 61 74 65 2d 6d 65 73 73 61 67 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword23">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword23.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 15" mutable="true" ref="IppGetPrinterAttributesPacket1.Attributes.OperationAttributes.keyword23.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 73 74 61 74 65 2d 72 65 61 73 6f 6e 73" mutable="true" />
+                </Block>
+            </Block>    
+            <Data type="delimiter-tag" value="03" mutable="true" /> <!-- end-of-attributes -->
+        </Block>
+    </Packet>
+
+    <Packet type="IppAttributes" name="IppValidateJobPacket" delay="b0 04" >
+        <Data name="HttpHeader" value="50 4f 53 54 20 2f 69 70 70 2f 70 72 69 6e 74 20 48 54 54 50 2f 31 2e 31 0d 0a 43 6f 6e 74 65 6e 74 2d 4c 65 6e 67 74 68 3a 20" mutable="false" />
+        <Size name="HttpHeaderLength" value="35 35 32" valueType="string" mutable="false" ref="IppValidateJobPacket.Attributes"/>
+        <Data value="0d 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 69 70 70 0d 0a 44 61 74 65 3a 20 4d 6f 6e 2c 20 31 31 20 44 65 63 20 32 30 32 33 20 31 32 3a 33 39 3a 30 39 20 47 4d 54 0d 0a 48 6f 73 74 3a 20 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 43 55 50 53 2f 32 2e 33 2e 31 20 28 4c 69 6e 75 78 20 35 2e 31 35 2e 30 2d 38 39 2d 67 65 6e 65 72 69 63 3b 20 78 38 36 5f 36 34 29 20 49 50 50 2f 32 2e 30 0d 0a 45 78 70 65 63 74 3a 20 31 30 30 2d 63 6f 6e 74 69 6e 75 65 0d 0a 0d 0a" mutable="false" />
+        <Block type="Attributes" name="Attributes">
+            <Data type="version" name="version" value="02 00" mutable="true" />
+            <Data type="operation-id" name="operation-id" value="00 04" mutable="true" />
+            <Data type="request-id" name="request-id" value="00 00 00 02" mutable="true" />
+            <Data type="delimiter-tag" name="operation-attributes-tag" value="01" mutable="true"/> <!-- operation-attributes-tag -->
+            <Block type="OperationAttibutes" name="OperationAttributes">
+                <Block type="Attribute" name="Charset" > <!-- CharsetAttribute -->
+                    <Data type="attr-tag" value="47" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.Charset.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 63 68 61 72 73 65 74" mutable="true"/>
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.Charset.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 74 66 2d 38" mutable="true"/>
+                </Block>
+                <Block type="Attribute" name="Language" > <!-- LanguageAttribute -->
+                    <Data type="attr-tag" value="48" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1b" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.Language.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 6e 61 74 75 72 61 6c 2d 6c 61 6e 67 75 61 67 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.Language.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="65 6e 2d 67 62" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="Uri"> <!-- UriAttribute -->
+                    <Data type="attr-tag" value="45" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0B" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.Uri.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 65 72 2d 75 72 69" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.Uri.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="69 70 70 3a 2f 2f 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 2f 69 70 70 2f 70 72 69 6e 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="UserName"> <!-- UserNameAttribute -->
+                    <Data type="attr-tag" value="42" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.UserName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 69 6e 67 2d 75 73 65 72 2d 6e 61 6d 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.UserName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 73 65 72" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="JobName"> <!-- JobNameAttribute -->
+                    <Data type="attr-tag" value="42" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 08" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.JobName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6a 6f 62 2d 6e 61 6d 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 13" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.JobName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="55 6e 74 69 74 6c 65 64 20 44 6f 63 75 6d 65 6e 74 20 31" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="DocumentFormat"> <!-- DocumentFormatAttribute -->
+                    <Data type="attr-tag" value="49" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0f" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.DocumentFormat.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="64 6f 63 75 6d 65 6e 74 2d 66 6f 72 6d 61 74" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 18" mutable="true" ref="IppValidateJobPacket.Attributes.OperationAttributes.DocumentFormat.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="61 70 70 6c 69 63 61 74 69 6f 6e 2f 6f 63 74 65 74 2d 73 74 72 65 61 6d" mutable="true" />
+                </Block>
+            </Block>
+            <Data name="job-attributes-tag" type="delimiter-tag" value="02" mutable="true" />
+            <Block type="JobAttributes" name="JobAttributes">
+                <Block type="Attribute" name="MediaCollection">
+                    <Data type="attr-tag" value="34" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 09" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MediaCollection.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6d 65 64 69 61 2d 63 6f 6c" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MediaCollection.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="collection">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.collection.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0a" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.collection.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 73 69 7a 65" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="DimentionCollectionBegin">
+                    <Data type="attr-tag" value="34" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.DimentionCollectionBegin.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.DimentionCollectionBegin.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="xDimentionName">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.xDimentionName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0b" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.xDimentionName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="78 2d 64 69 6d 65 6e 73 69 6f 6e " mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="xDimentionValue">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.xDimentionValue.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.xDimentionValue.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 52 08" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="yDimentionName">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.yDimentionName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0b" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.xDimentionName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="79 2d 64 69 6d 65 6e 73 69 6f 6e " mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="yDimentionValue">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.yDimentionValue.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.yDimentionValue.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 74 04" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="DimentionCollectionEnd">
+                    <Data type="attr-tag" value="37" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.DimentionCollectionEnd.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.DimentionCollectionEnd.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName1">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName1.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 10" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName1.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 74 6f 70 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue1">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue1.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue1.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName2">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName2.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 11" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName2.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 6c 65 66 74 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue2">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue2.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue2.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName3">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName3.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName3.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 72 69 67 68 74 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue3">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue3.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue3.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName4">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 13" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 62 6f 74 74 6f 6d 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue4">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName5">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 73 6f 75 72 63 65" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue5">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue5.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MemberAttrValue5.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="61 75 74 6f" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MediaCollectionEnd">
+                    <Data type="attr-tag" value="37" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MediaCollectionEnd.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MediaCollectionEnd.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="PrintColorMode">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 10" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.PrintColorMode.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 2d 63 6f 6c 6f 72 2d 6d 6f 64 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0f" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.PrintColorMode.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="61 75 74 6f 2d 6d 6f 6e 6f 63 68 72 6f 6d 65" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="PrintQuality">
+                    <Data type="attr-tag" value="23" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.PrintQuality.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 2d 71 75 61 6c 69 74 79" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.PrintQuality.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 00 04" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="Sides">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.Sides.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="73 69 64 65 73" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 09" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.Sides.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6f 6e 65 2d 73 69 64 65 64" mutable="true" />
+                </Block>
+                <!-- <Block type="Atrribute" name="MultiDocHandle">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1a" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MultiDocHandle.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6d 75 6c 74 69 70 6c 65 2d 64 6f 63 75 6d 65 6e 74 2d 68 61 6e 64 6c 69 6e 67" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 24" mutable="true" ref="IppValidateJobPacket.Attributes.JobAttributes.MultiDocHandle.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="73 65 70 61 72 61 74 65 2d 64 6f 63 75 6d 65 6e 74 73 2d 75 6e 63 6f 6c 6c 61 74 65 64 2d 63 6f 70 69 65 73" mutable="true" />
+                </Block> -->
+            </Block>
+            <Data type="delimiter-tag" value="03" mutable="true" /> <!-- end-of-attributes -->
+        </Block>
+    </Packet>
+
+    <Packet type="IppAttributes" name="IppCreateJobPacket" delay="b0 04" >
+        <Data name="HttpHeader" value="50 4f 53 54 20 2f 69 70 70 2f 70 72 69 6e 74 20 48 54 54 50 2f 31 2e 31 0d 0a 43 6f 6e 74 65 6e 74 2d 4c 65 6e 67 74 68 3a 20" mutable="false" />
+        <Size value="35 30 38" valueType="string" mutable="false" ref="IppCreateJobPacket.Attributes" />
+        <Data value="0d 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 69 70 70 0d 0a 44 61 74 65 3a 20 4d 6f 6e 2c 20 31 31 20 44 65 63 20 32 30 32 33 20 31 32 3a 33 39 3a 30 39 20 47 4d 54 0d 0a 48 6f 73 74 3a 20 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 43 55 50 53 2f 32 2e 33 2e 31 20 28 4c 69 6e 75 78 20 35 2e 31 35 2e 30 2d 38 39 2d 67 65 6e 65 72 69 63 3b 20 78 38 36 5f 36 34 29 20 49 50 50 2f 32 2e 30 0d 0a 45 78 70 65 63 74 3a 20 31 30 30 2d 63 6f 6e 74 69 6e 75 65 0d 0a 0d 0a" mutable="false" />
+        <Block type="Attributes" name="Attributes">
+            <Data type="version" name="version" value="02 00" mutable="true" />
+            <Data type="operation-id" name="operation-id" value="00 05" mutable="true" />
+            <Data type="request-id" name="request-id" value="00 00 00 04" mutable="true" />
+            <Data type="delimiter-tag" name="operation-attributes-tag" value="01" mutable="true"/> <!-- operation-attributes-tag -->
+            <Block type="OperationAttibutes" name="OperationAttributes">
+                <Block type="Attribute" name="Charset" > <!-- CharsetAttribute -->
+                    <Data type="attr-tag" value="47" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.Charset.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 63 68 61 72 73 65 74" mutable="true"/>
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.Charset.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 74 66 2d 38" mutable="true"/>
+                </Block>
+                <Block type="Attribute" name="Language" > <!-- LanguageAttribute -->
+                    <Data type="attr-tag" value="48" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1b" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.Language.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 6e 61 74 75 72 61 6c 2d 6c 61 6e 67 75 61 67 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.Language.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="65 6e 2d 67 62" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="Uri"> <!-- UriAttribute -->
+                    <Data type="attr-tag" value="45" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0B" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.Uri.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 65 72 2d 75 72 69" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.Uri.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="69 70 70 3a 2f 2f 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 2f 69 70 70 2f 70 72 69 6e 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="UserName"> <!-- UserNameAttribute -->
+                    <Data type="attr-tag" value="42" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.UserName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 69 6e 67 2d 75 73 65 72 2d 6e 61 6d 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.UserName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 73 65 72" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="JobName"> <!-- JobNameAttribute -->
+                    <Data type="attr-tag" value="42" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 08" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.JobName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6a 6f 62 2d 6e 61 6d 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 13" mutable="true" ref="IppCreateJobPacket.Attributes.OperationAttributes.JobName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="55 6e 74 69 74 6c 65 64 20 44 6f 63 75 6d 65 6e 74 20 31" mutable="true" />
+                </Block>
+            </Block>
+            <Data name="job-attributes-tag" type="delimiter-tag" value="02" mutable="true" />
+            <Block type="JobAttributes" name="JobAttributes">
+                <Block type="Attribute" name="MediaCollection">
+                    <Data type="attr-tag" value="34" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 09" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MediaCollection.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6d 65 64 69 61 2d 63 6f 6c" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MediaCollection.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="collection">
+                        <Data type="attr-tag" value="4a" mutable="true" />
+                        <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.collection.attr-key" />
+                        <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                        <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0a" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.collection.attr-value" />
+                        <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 73 69 7a 65" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="DimentionCollectionBegin">
+                    <Data type="attr-tag" value="34" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.DimentionCollectionBegin.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.DimentionCollectionBegin.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="xDimentionName">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.xDimentionName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0b" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.xDimentionName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="78 2d 64 69 6d 65 6e 73 69 6f 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="xDimentionValue">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.xDimentionValue.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.xDimentionValue.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 52 08" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="yDimentionName">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.yDimentionName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0b" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.xDimentionName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="79 2d 64 69 6d 65 6e 73 69 6f 6e " mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="yDimentionValue">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.yDimentionValue.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.yDimentionValue.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 74 04" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="DimentionCollectionEnd">
+                    <Data type="attr-tag" value="37" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.DimentionCollectionEnd.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.DimentionCollectionEnd.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName1">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName1.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 10" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName1.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 74 6f 70 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue1">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue1.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue1.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName2">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName2.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 11" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName2.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 6c 65 66 74 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue2">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue2.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue2.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName3">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName3.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName3.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 72 69 67 68 74 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue3">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue3.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue3.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName4">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 13" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 62 6f 74 74 6f 6d 2d 6d 61 72 67 69 6e" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue4">
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 01 a7" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrName5">
+                    <Data type="attr-tag" value="4a" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrName4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 73 6f 75 72 63 65" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MemberAttrValue5">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue5.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MemberAttrValue5.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="61 75 74 6f" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="MediaCollectionEnd">
+                    <Data type="attr-tag" value="37" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MediaCollectionEnd.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MediaCollectionEnd.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="PrintColorMode">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 10" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.PrintColorMode.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 2d 63 6f 6c 6f 72 2d 6d 6f 64 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0f" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.PrintColorMode.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="61 75 74 6f 2d 6d 6f 6e 6f 63 68 72 6f 6d 65" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="PrintQuality">
+                    <Data type="attr-tag" value="23" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.PrintQuality.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 2d 71 75 61 6c 69 74 79" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.PrintQuality.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 00 04" mutable="true" />
+                </Block>
+                <Block type="Atrribute" name="Sides">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.Sides.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="73 69 64 65 73" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 09" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.Sides.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6f 6e 65 2d 73 69 64 65 64" mutable="true" />
+                </Block>
+                <!-- <Block type="Atrribute" name="MultiDocHandle">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1a" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MultiDocHandle.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6d 75 6c 74 69 70 6c 65 2d 64 6f 63 75 6d 65 6e 74 2d 68 61 6e 64 6c 69 6e 67" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 24" mutable="true" ref="IppCreateJobPacket.Attributes.JobAttributes.MultiDocHandle.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="73 65 70 61 72 61 74 65 2d 64 6f 63 75 6d 65 6e 74 73 2d 75 6e 63 6f 6c 6c 61 74 65 64 2d 63 6f 70 69 65 73" mutable="true" />
+                </Block> -->
+            </Block>
+            <Data type="delimiter-tag" value="03" mutable="true" /> <!-- end-of-attributes -->
+        </Block>
+    </Packet>
+
+    <Packet type="IppAttributes" name="IppSendDocument" delay="b0 04" >
+        <Data name="HttpHeader" value="50 4f 53 54 20 2f 69 70 70 2f 70 72 69 6e 74 20 48 54 54 50 2f 31 2e 31 0d 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 69 70 70 0d 0a 44 61 74 65 3a 20 4d 6f 6e 2c 20 31 31 20 44 65 63 20 32 30 32 33 20 31 32 3a 33 39 3a 31 30 20 47 4d 54 0d 0a 48 6f 73 74 3a 20 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 0d 0a 54 72 61 6e 73 66 65 72 2d 45 6e 63 6f 64 69 6e 67 3a 20 63 68 75 6e 6b 65 64 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 43 55 50 53 2f 32 2e 33 2e 31 20 28 4c 69 6e 75 78 20 35 2e 31 35 2e 30 2d 38 39 2d 67 65 6e 65 72 69 63 3b 20 78 38 36 5f 36 34 29 20 49 50 50 2f 32 2e 30 0d 0a 45 78 70 65 63 74 3a 20 31 30 30 2d 63 6f 6e 74 69 6e 75 65 0d 0a 0d 0a" mutable="false" />
+        <Size name="attr-len" valueType="hex" value="65 36" mutable="false" ref="IppSendDocument.Attributes" />
+        <Data name="lf-begin" value="0d 0a" mutable="false" />
+        <Block type="Attributes" name="Attributes">
+            <Data type="version" name="version" value="02 00" mutable="true" />
+            <Data type="operation-id" name="operation-id" value="00 06" mutable="true" />
+            <Data type="request-id" name="request-id" value="00 00 00 06" mutable="true" />
+            <Data type="delimiter-tag" name="operation-attributes-tag" value="01" mutable="true"/> <!-- operation-attributes-tag -->
+            <Block type="OperationAttibutes" name="OperationAttributes">
+                <Block type="Attribute" name="Charset" > <!-- CharsetAttribute -->
+                    <Data type="attr-tag" value="47" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.Charset.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 63 68 61 72 73 65 74" mutable="true"/>
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.Charset.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 74 66 2d 38" mutable="true"/>
+                </Block>
+                <Block type="Attribute" name="Language" > <!-- LanguageAttribute -->
+                    <Data type="attr-tag" value="48" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1b" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.Language.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 6e 61 74 75 72 61 6c 2d 6c 61 6e 67 75 61 67 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.Language.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="65 6e 2d 67 62" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="Uri"> <!-- UriAttribute -->
+                    <Data type="attr-tag" value="45" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0B" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.Uri.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 65 72 2d 75 72 69" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.Uri.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="69 70 70 3a 2f 2f 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 2f 69 70 70 2f 70 72 69 6e 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="JobId"> <!-- UserNameAttribute -->
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 06" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.JobId.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6a 6f 62 2d 69 64" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.JobId.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 00 57" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="UserName"> <!-- UserNameAttribute -->
+                    <Data type="attr-tag" value="42" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.UserName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 69 6e 67 2d 75 73 65 72 2d 6e 61 6d 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.UserName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 73 65 72" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="lastDocument"> <!-- lastDocumentAttribute -->
+                    <Data type="attr-tag" value="22" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.lastDocument.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6c 61 73 74 2d 64 6f 63 75 6d 65 6e 74" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 01" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.lastDocument.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="01" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="DocumentFormat"> <!-- DocumentFormatAttribute -->
+                    <Data type="attr-tag" value="49" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0f" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.DocumentFormat.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="64 6f 63 75 6d 65 6e 74 2d 66 6f 72 6d 61 74" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 18" mutable="true" ref="IppSendDocument.Attributes.OperationAttributes.DocumentFormat.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="61 70 70 6c 69 63 61 74 69 6f 6e 2f 6f 63 74 65 74 2d 73 74 72 65 61 6d" mutable="true" />
+                </Block>
+            </Block>
+            <Data type="delimiter-tag" value="03" mutable="true" /> <!-- end-of-attributes -->
+        </Block>
+        <Data value="0d 0a" mutable="false" />
+        <Block type="FileLength" name="octetsLength">
+            <Size valueType="hex" value="32 37 38" mutable="false" ref="IppSendDocument.FileContent" />
+            <Data value="0d 0a" mutable="false" />
+        </Block>
+        <Block type="File" name="FileContent" >
+            <Data value="ff d8 ff e0 00 10 4a 46 49 46 00 01 01 01 00 78 00 78 00 00 ff db 00 43 00 08 06 06 07 06 05 08 07 07 07 09 09 08 0a 0c 14 0d 0c 0b 0b 0c 19 12 13 0f 14 1d 1a 1f 1e 1d 1a 1c 1c 20 24 2e 27 20 22 2c 23 1c 1c 28 37 29 2c 30 31 34 34 34 1f 27 39 3d 38 32 3c 2e 33 34 32 ff db 00 43 01 09 09 09 0c 0b 0c 18 0d 0d 18 32 21 1c 21 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 ff c0 00 11 08 00 0d 00 0e 03 01 22 00 02 11 01 03 11 01 ff c4 00 1f 00 00 01 05 01 01 01 01 01 01 00 00 00 00 00 00 00 00 01 02 03 04 05 06 07 08 09 0a 0b ff c4 00 b5 10 00 02 01 03 03 02 04 03 05 05 04 04 00 00 01 7d 01 02 03 00 04 11 05 12 21 31 41 06 13 51 61 07 22 71 14 32 81 91 a1 08 23 42 b1 c1 15 52 d1 f0 24 33 62 72 82 09 0a 16 17 18 19 1a 25 26 27 28 29 2a 34 35 36 37 38 39 3a 43 44 45 46 47 48 49 4a 53 54 55 56 57 58 59 5a 63 64 65 66 67 68 69 6a 73 74 75 76 77 78 79 7a 83 84 85 86 87 88 89 8a 92 93 94 95 96 97 98 99 9a a2 a3 a4 a5 a6 a7 a8 a9 aa b2 b3 b4 b5 b6 b7 b8 b9 ba c2 c3 c4 c5 c6 c7 c8 c9 ca d2 d3 d4 d5 d6 d7 d8 d9 da e1 e2 e3 e4 e5 e6 e7 e8 e9 ea f1 f2 f3 f4 f5 f6 f7 f8 f9 fa ff c4 00 1f 01 00 03 01 01 01 01 01 01 01 01 01 00 00 00 00 00 00 01 02 03 04 05 06 07 08 09 0a 0b ff c4 00 b5 11 00 02 01 02 04 04 03 04 07 05 04 04 00 01 02 77 00 01 02 03 11 04 05 21 31 06 12 41 51 07 61 71 13 22 32 81 08 14 42 91 a1 b1 c1 09 23 33 52 f0 15 62 72 d1 0a 16 24 34 e1 25 f1 17 18 19 1a 26 27 28 29 2a 35 36 37 38 39 3a 43 44 45 46 47 48 49 4a 53 54 55 56 57 58 59 5a 63 64 65 66 67 68 69 6a 73 74 75 76 77 78 79 7a 82 83 84 85 86 87 88 89 8a 92 93 94 95 96 97 98 99 9a a2 a3 a4 a5 a6 a7 a8 a9 aa b2 b3 b4 b5 b6 b7 b8 b9 ba c2 c3 c4 c5 c6 c7 c8 c9 ca d2 d3 d4 d5 d6 d7 d8 d9 da e2 e3 e4 e5 e6 e7 e8 e9 ea f2 f3 f4 f5 f6 f7 f8 f9 fa ff da 00 0c 03 01 00 02 11 03 11 00 3f 00 f7 fa 28 a2 80 3f ff d9 00" mutable="false" />
+        </Block>
+        <Data type="EndFile" value="0d 0a 30 0d 0a 0d 0a" mutable="false" />
+    </Packet>
+
+    <Packet type="IppAttributes" name="IppGetPrinterAttributesPacket2" delay="b0 04" >
+        <Data name="HttpHeader" value="50 4f 53 54 20 2f 69 70 70 2f 70 72 69 6e 74 20 48 54 54 50 2f 31 2e 31 0d 0a 43 6f 6e 74 65 6e 74 2d 4c 65 6e 67 74 68 3a 20 37 34 34 0d 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 69 70 70 0d 0a 44 61 74 65 3a 20 4d 6f 6e 2c 20 31 31 20 44 65 63 20 32 30 32 33 20 31 32 3a 33 39 3a 31 31 20 47 4d 54 0d 0a 48 6f 73 74 3a 20 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 43 55 50 53 2f 32 2e 33 2e 31 20 28 4c 69 6e 75 78 20 35 2e 31 35 2e 30 2d 38 39 2d 67 65 6e 65 72 69 63 3b 20 78 38 36 5f 36 34 29 20 49 50 50 2f 32 2e 30 0d 0a 45 78 70 65 63 74 3a 20 31 30 30 2d 63 6f 6e 74 69 6e 75 65 0d 0a 0d 0a" mutable="false" />
+        <Block type="Attributes" name="Attributes">
+            <Data type="version" name="version" value="02 00" mutable="true" />
+            <Data type="operation-id" name="operation-id" value="00 0b" mutable="true" />
+            <Data type="request-id" name="request-id" value="00 00 00 07" mutable="true" />
+            <Data type="delimiter-tag" name="operation-attributes-tag" value="01" mutable="true"/> <!-- operation-attributes-tag -->
+            <Block type = "OperationAttributes" name="OperationAttributes">
+                <Block type="Attribute" name="Charset" > <!-- CharsetAttribute -->
+                    <Data type="attr-tag" value="47" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.Charset.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 63 68 61 72 73 65 74" mutable="true"/>
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.Charset.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 74 66 2d 38" mutable="true"/>
+                </Block>
+                <Block type="Attribute" name="Language" > <!-- LanguageAttribute -->
+                    <Data type="attr-tag" value="48" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1b" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.Language.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 6e 61 74 75 72 61 6c 2d 6c 61 6e 67 75 61 67 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.Language.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="65 6e 2d 67 62" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="Uri"> <!-- UriAttribute -->
+                    <Data type="attr-tag" value="45" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0B" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.Uri.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 65 72 2d 75 72 69" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.Uri.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="69 70 70 3a 2f 2f 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 2f 69 70 70 2f 70 72 69 6e 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="UserName"> <!-- UserNameAttribute -->
+                    <Data type="attr-tag" value="42" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.UserName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 69 6e 67 2d 75 73 65 72 2d 6e 61 6d 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.UserName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 73 65 72" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword0">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword0.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 65 64 2d 61 74 74 72 69 62 75 74 65 73" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 15" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword0.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="63 6f 6d 70 72 65 73 73 69 6f 6e 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword1">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword1.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 10" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword1.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="63 6f 70 69 65 73 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword2">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword2.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword2.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="63 75 70 73 2d 76 65 72 73 69 6f 6e" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword3">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword3.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword3.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="64 6f 63 75 6d 65 6e 74 2d 66 6f 72 6d 61 74 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword4">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 21" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 70 61 73 73 77 6f 72 64 2d 65 6e 63 72 79 70 74 69 6f 6e 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword5">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword5.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword5.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 63 6f 6c 6f 72 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword6">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword6.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword6.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 68 69 67 68 2d 6c 65 76 65 6c 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword7">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword7.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword7.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6c 65 76 65 6c 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword8">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword8.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 11" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword8.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6c 6f 77 2d 6c 65 76 65 6c 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword9">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword9.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0e" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword9.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6d 65 73 73 61 67 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword11">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword11.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword11.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 6e 61 6d 65 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword12">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword12.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0c" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword12.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 61 72 6b 65 72 2d 74 79 70 65 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword13">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword13.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 13" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword13.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 65 64 69 61 2d 63 6f 6c 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword14">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword14.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 24" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword14.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6d 75 6c 74 69 70 6c 65 2d 64 6f 63 75 6d 65 6e 74 2d 68 61 6e 64 6c 69 6e 67 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword15">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword15.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword15.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6f 70 65 72 61 74 69 6f 6e 73 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword16">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword16.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 1a" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword16.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 2d 63 6f 6c 6f 72 2d 6d 6f 64 65 2d 73 75 70 70 6f 72 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword17">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword17.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword17.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 61 6c 65 72 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword18">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword18.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword18.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 61 6c 65 72 74 2d 64 65 73 63 72 69 70 74 69 6f 6e" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword19">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword19.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword19.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 69 73 2d 61 63 63 65 70 74 69 6e 67 2d 6a 6f 62 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword20">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword20.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword20.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 6d 61 6e 64 61 74 6f 72 79 2d 6a 6f 62 2d 61 74 74 72 69 62 75 74 65 73" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword21">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword21.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 0d" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword21.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 73 74 61 74 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword22">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword22.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 15" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword22.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 73 74 61 74 65 2d 6d 65 73 73 61 67 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword23">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword23.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 15" mutable="true" ref="IppGetPrinterAttributesPacket2.Attributes.OperationAttributes.keyword23.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="70 72 69 6e 74 65 72 2d 73 74 61 74 65 2d 72 65 61 73 6f 6e 73" mutable="true" />
+                </Block>
+            </Block>    
+            <Data type="delimiter-tag" value="03" mutable="true" /> <!-- end-of-attributes -->
+        </Block>
+    </Packet>
+
+    <Packet type="IppAttributes" name="IppGetJobAttributes" delay="b0 04" >
+        <Data name="HttpHeader" value="50 4f 53 54 20 2f 69 70 70 2f 70 72 69 6e 74 20 48 54 54 50 2f 31 2e 31 0d 0a 43 6f 6e 74 65 6e 74 2d 4c 65 6e 67 74 68 3a 20" mutable="false" />
+        <Size value="33 33 38" valueType="string" mutable="false" ref="IppGetJobAttributes.Attributes" />
+        <Data value="0d 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 61 74 69 6f 6e 2f 69 70 70 0d 0a 44 61 74 65 3a 20 4d 6f 6e 2c 20 31 31 20 44 65 63 20 32 30 32 33 20 31 32 3a 33 39 3a 31 31 20 47 4d 54 0d 0a 48 6f 73 74 3a 20 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 0d 0a 55 73 65 72 2d 41 67 65 6e 74 3a 20 43 55 50 53 2f 32 2e 33 2e 31 20 28 4c 69 6e 75 78 20 35 2e 31 35 2e 30 2d 38 39 2d 67 65 6e 65 72 69 63 3b 20 78 38 36 5f 36 34 29 20 49 50 50 2f 32 2e 30 0d 0a 45 78 70 65 63 74 3a 20 31 30 30 2d 63 6f 6e 74 69 6e 75 65 0d 0a 0d 0a" mutable="false" />
+        <Block type="Attributes" name="Attributes">
+            <Data type="version" name="version" value="02 00" mutable="true" />
+            <Data type="operation-id" name="operation-id" value="00 09" mutable="true" />
+            <Data type="request-id" name="request-id" value="00 00 00 08" mutable="true" />
+            <Data type="delimiter-tag" name="operation-attributes-tag" value="01" mutable="true"/> <!-- operation-attributes-tag -->
+            <Block type="OperationAttibutes" name="OperationAttributes">
+                <Block type="Attribute" name="Charset" > <!-- CharsetAttribute -->
+                    <Data type="attr-tag" value="47" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 12" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.Charset.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 63 68 61 72 73 65 74" mutable="true"/>
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.Charset.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 74 66 2d 38" mutable="true"/>
+                </Block>
+                <Block type="Attribute" name="Language" > <!-- LanguageAttribute -->
+                    <Data type="attr-tag" value="48" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 1b" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.Language.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="61 74 74 72 69 62 75 74 65 73 2d 6e 61 74 75 72 61 6c 2d 6c 61 6e 67 75 61 67 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 05" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.Language.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="65 6e 2d 67 62" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="Uri"> <!-- UriAttribute -->
+                    <Data type="attr-tag" value="45" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 0B" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.Uri.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="70 72 69 6e 74 65 72 2d 75 72 69" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 20" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.Uri.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="69 70 70 3a 2f 2f 31 39 32 2e 31 36 38 2e 31 2e 39 38 3a 36 33 31 2f 69 70 70 2f 70 72 69 6e 74" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="JobId"> <!-- UserNameAttribute -->
+                    <Data type="attr-tag" value="21" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 06" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.JobId.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="6a 6f 62 2d 69 64" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.JobId.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="00 00 00 57" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="UserName"> <!-- UserNameAttribute -->
+                    <Data type="attr-tag" value="42" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.UserName.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 69 6e 67 2d 75 73 65 72 2d 6e 61 6d 65" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 04" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.UserName.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="75 73 65 72" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword0">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 14" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword0.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="72 65 71 75 65 73 74 65 64 2d 61 74 74 72 69 62 75 74 65 73" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 06" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword0.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 69 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword1">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword1.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword1.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 69 6d 70 72 65 73 73 69 6f 6e 73 2d 63 6f 6d 70 6c 65 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword2">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword2.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 1a" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword2.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 6d 65 64 69 61 2d 73 68 65 65 74 73 2d 63 6f 6d 70 6c 65 74 65 64" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword3">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword3.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 08" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword3.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 6e 61 6d 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword4">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword4.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 19" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword4.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 6f 72 69 67 69 6e 61 74 69 6e 67 2d 75 73 65 72 2d 6e 61 6d 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword5">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword5.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 09" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword5.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 73 74 61 74 65" mutable="true" />
+                </Block>
+                <Block type="Attribute" name="keyword6">
+                    <Data type="attr-tag" value="44" mutable="true" />
+                    <Size type="attr-key-length" valueType="byte" endian="big" len="2" value="00 00" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword6.attr-key" />
+                    <Data type="attr-key" name="attr-key" value="" mutable="true" />
+                    <Size type="attr-value-length" valueType="byte" endian="big" len="2" value="00 11" mutable="true" ref="IppGetJobAttributes.Attributes.OperationAttributes.keyword6.attr-value" />
+                    <Data type="attr-value" name="attr-value" value="6a 6f 62 2d 73 74 61 74 65 2d 72 65 61 73 6f 6e 73" mutable="true" />
+                </Block>
+            </Block>
+            <Data type="delimiter-tag" value="03" mutable="true" /> <!-- end-of-attributes -->
+        </Block>
+    </Packet>
+
+</Sequence>

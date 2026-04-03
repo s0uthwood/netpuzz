@@ -1,0 +1,163 @@
+#include "./utils.hpp"
+
+#include <algorithm>
+#include <cctype>
+#include <chrono>
+#include <cstdio>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <memory>
+#include <sstream>
+#include <stdexcept>
+
+std::string getCurrentTime() {
+    std::time_t currentTime;
+    auto now = std::chrono::system_clock::now();
+    currentTime = std::chrono::time_point_cast<std::chrono::seconds>(now).time_since_epoch().count();
+    struct tm *localTime = localtime(&currentTime);
+    char buffer[80] = {};
+    strftime(buffer, sizeof(buffer), "%Y%m%d-%H%M%S", localTime);
+    return std::string(buffer);
+}
+
+std::string u64ToHexString(u64 input, const std::string &hexcase) {
+    std::stringstream hexStream;
+    hexStream << std::hex << std::uppercase << input;
+    std::string hexString = hexStream.str();
+    if (hexcase == "lower") {
+        std::transform(hexString.begin(), hexString.end(), hexString.begin(),
+                       [](unsigned char c) { return std::tolower(c); });
+    } else if (hexcase == "upper") {
+        std::transform(hexString.begin(), hexString.end(), hexString.begin(),
+                       [](unsigned char c) { return std::toupper(c); });
+    } else {
+        std::cout << "Error: Invalid hexcase: " << hexcase << std::endl;
+    }
+    return hexString;
+}
+
+std::vector<u8> hexStringToBytes(const std::string &inputString) {
+    std::string hexString = inputString;
+    std::vector<u8> bytes;
+    hexString.erase(std::remove_if(hexString.begin(), hexString.end(), [](char ch) {
+                        return ch == ' ' || ch == '\n' || ch == '\r';
+                    }),
+                    hexString.end());
+
+    bytes.reserve(hexString.length() / 2);
+
+    for (size_t i = 0; i < hexString.length(); i += 2) {
+        std::string byteString = hexString.substr(i, 2);
+        auto byte = static_cast<u8>(std::stoul(byteString, nullptr, 16));
+        bytes.push_back(byte);
+    }
+
+    return bytes;
+}
+
+std::string stringToHex(const std::string &input) {
+    std::stringstream hexStream;
+    hexStream << std::hex << std::setfill('0');
+
+    for (char ch : input) {
+        hexStream << std::setw(2) << std::setfill('0') << std::hex << static_cast<int>(static_cast<unsigned char>(ch)) << " ";
+    }
+
+    std::string hexString = hexStream.str();
+    hexString.pop_back();
+    return hexString;
+}
+
+void u64ToBytes(u64 input, size_t len, bool is_little_endian, std::vector<u8> &bytes) {
+    bytes.reserve(len);
+    for (size_t i = 0; i < len; ++i) {
+        bytes.push_back(static_cast<u8>(input >> (i * 8)));
+    }
+    if (!is_little_endian) {
+        std::reverse(bytes.begin(), bytes.end());
+    }
+}
+
+std::string to_hex_string(int number, int length) {
+    if (length > 16) {
+        length = 16;
+    } else if (length < 1) {
+        length = 1;
+    }
+    char buffer[32];
+    snprintf(buffer, sizeof(buffer), "%0*x", length, number);
+    return std::string(buffer);
+}
+
+u64 parseHexStringAsLittleEndian(const std::string &hex_string, size_t len) {
+    std::istringstream converter(hex_string);
+    uint64_t value = 0;
+    for (size_t i = 0; i < len; ++i) {
+        unsigned int byte;
+        converter >> std::hex >> byte;
+        if (converter.fail()) {
+            throw std::runtime_error("Conversion failed.");
+        }
+        value |= static_cast<uint64_t>(byte) << (i * 8);
+        converter.ignore(1);
+    }
+    return value;
+}
+
+std::vector<std::string> splitString(const std::string &s, char delimiter) {
+    std::vector<std::string> tokens;
+    std::string token;
+    std::istringstream tokenStream(s);
+
+    while (std::getline(tokenStream, token, delimiter)) {
+        tokens.push_back(token);
+    }
+
+    return tokens;
+}
+
+std::string executeCommand(const std::string &command) {
+    std::string result;
+    FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    char buf[1025] = {0};
+    while (fgets(buf, 1024, pipe) != nullptr) {
+        result.append(buf);
+    }
+    int status = pclose(pipe);
+    int exit_status = WEXITSTATUS(status);
+    if (exit_status != 0) {
+        throw std::runtime_error("Command failed");
+    }
+    return result;
+}
+
+std::string toLower(const std::string &str) {
+    std::string result = str;
+    std::transform(result.begin(), result.end(), result.begin(), ::tolower);
+    return result;
+}
+
+double stringSimilarity(const std::string& s1, const std::string& s2) {
+    int m = s1.size();
+    int n = s2.size();
+    std::vector<std::vector<int>> dp(m + 1, std::vector<int>(n + 1));
+    for (int i = 0; i <= m; ++i) {
+        dp[i][0] = i;
+    }
+    for (int j = 0; j <= n; ++j) {
+        dp[0][j] = j;
+    }
+
+    for (int i = 1; i <= m; ++i) {
+        for (int j = 1; j <= n; ++j) {
+            int cost = (s1[i - 1] == s2[j - 1])? 0 : 1;
+            dp[i][j] = std::min({dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost});
+        }
+    }
+
+    return 1 - static_cast<double>(dp[m][n]) / std::max(m, n);
+}
